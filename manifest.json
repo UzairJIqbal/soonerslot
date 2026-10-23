@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "SoonerSlot – Global Entry & NEXUS Interview Finder (Unofficial)",
+  "short_name": "SoonerSlot",
+  "description": "Get alerted the minute an earlier Global Entry, NEXUS, SENTRI or FAST interview opens near you. Free, no account. Not affiliated with CBP.",
+  "version": "1.0.0",
+  "minimum_chrome_version": "116",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "SoonerSlot"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": ["storage", "alarms", "notifications", "offscreen"],
+  "host_permissions": ["https://ttp.cbp.dhs.gov/*"]
+}
