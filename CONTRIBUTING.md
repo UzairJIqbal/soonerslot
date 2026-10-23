@@ -18,7 +18,8 @@ For anything larger than a small fix, please open an issue first so we can agree
 1. Fork the repository and create a branch from `main`.
 2. Load your copy with **Load unpacked** in `chrome://extensions` and test the change by hand.
 3. Run `npm run check` and make sure it passes.
-4. Open a pull request that explains what changed and why, with a screenshot for any UI change.
+4. If you changed an entry point, a step or a call site, update [docs/FLOW.md](docs/FLOW.md) and mark what changed.
+5. Open a pull request that explains what changed and why, with a screenshot for any UI change.
 
 ## Ground rules
 

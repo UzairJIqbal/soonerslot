@@ -90,6 +90,8 @@ flowchart LR
 - **Only new openings alert you.** Every slot you've already been told about is remembered, so a slot that stays open doesn't ping you every minute.
 - **Built for Manifest V3.** The service worker can shut down at any time, so all state lives in `chrome.storage.local`. Sound plays through an offscreen document.
 
+For the full execution path, function by function, see [docs/FLOW.md](docs/FLOW.md).
+
 ## Privacy
 
 SoonerSlot has no servers, no accounts, no analytics and no tracking. Your search settings are stored only in your browser, and the only network requests it makes go to CBP's public scheduling API at `ttp.cbp.dhs.gov`. See the full [privacy policy](PRIVACY.md).
@@ -120,6 +122,7 @@ SoonerSlot has no servers, no accounts, no analytics and no tracking. Your searc
 ├── data/zips.json         ZIP code → [lat, lon] table
 ├── sounds/chime.wav
 ├── images/                Extension icons
+├── docs/FLOW.md           Execution map: entry points and call order
 ├── tools/                 Script that builds data/zips.json
 └── scripts/               Validation and packaging
 ```
