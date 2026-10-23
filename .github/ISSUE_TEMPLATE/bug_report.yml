@@ -1,0 +1,42 @@
+name: Bug report
+description: Something isn't working the way it should.
+labels: [bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Program: Global Entry, Near me, 100 miles
+        2. Click Start watching
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: SoonerSlot version
+      description: Shown on the extension's card in chrome://extensions.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and operating system
+      placeholder: Chrome 131 on macOS 15
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Service worker errors
+      description: chrome://extensions → SoonerSlot → Service worker → Console. Paste any red errors.
+      render: text

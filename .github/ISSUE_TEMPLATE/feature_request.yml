@@ -1,0 +1,24 @@
+name: Feature request
+description: Suggest something that would help you find an interview sooner.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's the problem?
+      description: Describe the situation, for example "I can only do interviews after 4 PM on weekdays".
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help?
+    validations:
+      required: true
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Before submitting
+      options:
+        - label: This doesn't involve booking appointments automatically, which SoonerSlot won't do.
+          required: true
