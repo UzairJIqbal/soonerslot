@@ -95,3 +95,50 @@ Then tick all three certifications:
 - **Payments:** Free
 - **Visibility:** Public
 - **Regions:** All regions (useful anywhere, since NEXUS applicants include Canadians)
+
+# Microsoft Edge Add-ons
+
+Submitted through [Partner Center](https://partner.microsoft.com/dashboard/microsoftedge/overview). The same zip works unchanged. Most of the Chrome copy above carries over; the differences are below.
+
+## Packages
+
+Upload `dist/soonerslot-<version>.zip`.
+
+## Availability
+
+- **Visibility:** Public
+- **Markets:** All markets
+
+## Properties
+
+- **Category:** Productivity (Edge has no Travel category)
+- **Privacy policy:** Yes, it requires one. URL: https://github.com/UzairJIqbal/soonerslot/blob/main/PRIVACY.md
+- **Website URL:** https://github.com/UzairJIqbal/soonerslot
+- **Support contact details:** https://github.com/UzairJIqbal/soonerslot/issues
+- **Mature content:** No
+
+## Store listings (English)
+
+- **Description:** the same text as the Chrome description above (Edge needs at least 250 characters).
+- **Extension logo:** `images/icon-128.png`
+- **Small promotional tile:** `promo-small-440x280.png`
+- **Large promotional tile:** `promo-marquee-1400x560.png`
+- **Screenshots:** `screenshot-1.png`, `screenshot-2.png`, `screenshot-3.png`
+- **Search terms** (one per box):
+  - Global Entry
+  - NEXUS
+  - SENTRI
+  - interview appointment
+  - trusted traveler
+  - appointment alert
+  - CBP scheduler
+
+## Notes for certification
+
+```text
+SoonerSlot reads open interview slots from the public U.S. Trusted Traveler scheduling API (ttp.cbp.dhs.gov) once a minute and shows a notification when one matches the user's search. No login or account is needed to test it.
+
+To test: open the popup, choose Global Entry, choose "Near me", enter ZIP code 10001, set "Within" to "Anywhere", and click "Start watching". The board fills with openings within about a minute, and a notification appears.
+
+No data is collected or sent anywhere except requests to ttp.cbp.dhs.gov. Source code: https://github.com/UzairJIqbal/soonerslot
+```
