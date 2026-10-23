@@ -25,6 +25,14 @@ for (const file of referenced) {
 	}
 }
 
+// Chrome Web Store rejects uploads that exceed these.
+for (const [field, max] of [["name", 75], ["short_name", 12], ["description", 132]]) {
+	const length = manifest[field]?.length ?? 0;
+	if (length > max) {
+		fail(`manifest ${field} is ${length} characters; the Chrome Web Store allows ${max}`);
+	}
+}
+
 const pkg = JSON.parse(readFileSync(join(root, "package.json"), "utf8"));
 if (pkg.version !== manifest.version) {
 	fail(`version mismatch: package.json ${pkg.version} vs manifest ${manifest.version}`);
