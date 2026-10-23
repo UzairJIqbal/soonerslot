@@ -1,0 +1,17 @@
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Dependencies and build output
+node_modules/
+dist/
+*.zip
+*.crx
+*.pem
+
+# Raw Census gazetteer downloads used by tools/build-zip-table.py
+*_Gaz_*.txt
+
+# Private planning notes
+FEATURE-ROADMAP.md

@@ -1,0 +1,20 @@
+{
+  "name": "soonerslot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chrome extension that alerts you when an earlier Global Entry, NEXUS, SENTRI or FAST interview opens near you. Unofficial.",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UzairJIqbal/soonerslot.git"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "node scripts/validate.mjs",
+    "package": "bash scripts/package.sh",
+    "build:zips": "python3 -I tools/build-zip-table.py"
+  }
+}
