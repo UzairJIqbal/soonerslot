@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoonerSlot</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+
+  <body>
+    <header class="masthead">
+      <div class="brand">
+        <img src="../images/icon-32.png" alt="" width="22" height="22" />
+        <span class="wordmark">SoonerSlot</span>
+        <span class="unofficial">Unofficial</span>
+      </div>
+      <span id="statusPill" class="pill" data-state="stopped">Stopped</span>
+    </header>
+
+    <section class="board" aria-labelledby="boardTitle">
+      <div class="board-head">
+        <h2 id="boardTitle">Earliest openings</h2>
+        <span id="statusLine" class="board-status"></span>
+      </div>
+      <ol id="slotList" class="board-rows"></ol>
+      <p id="boardEmpty" class="board-empty" role="status"></p>
+      <p id="boardMore" class="board-more" hidden></p>
+    </section>
+
+    <aside id="tip" class="tip" hidden>
+      <p>
+        <strong>Book first, then trade up.</strong> If you spot any slot, book
+        it, then enter that date under "Already booked". SoonerSlot will only
+        alert you to earlier openings, and rescheduling takes a few clicks.
+      </p>
+      <button type="button" id="dismissTip" class="text-button">Got it</button>
+    </aside>
+
+    <form id="searchForm" novalidate>
+      <fieldset id="settings">
+        <legend class="visually-hidden">Search settings</legend>
+
+        <div class="field">
+          <label for="program">Program</label>
+          <select id="program"></select>
+        </div>
+
+        <div class="field">
+          <span class="label" id="whereLabel">Where</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="whereLabel">
+            <label><input type="radio" name="mode" value="nearby" />Near me</label>
+            <label><input type="radio" name="mode" value="centers" />Specific centers</label>
+          </div>
+        </div>
+
+        <div id="nearbyFields">
+          <div class="row">
+            <div class="field">
+              <label for="homeZip">Home ZIP code</label>
+              <input
+                id="homeZip"
+                inputmode="numeric"
+                maxlength="5"
+                autocomplete="postal-code"
+                placeholder="94103"
+              />
+            </div>
+            <div class="field">
+              <label for="radius">Within</label>
+              <select id="radius"></select>
+            </div>
+          </div>
+          <p id="homeZipError" class="error" hidden></p>
+          <p id="nearbyHint" class="hint"></p>
+        </div>
+
+        <div id="centerFields" hidden>
+          <div class="field">
+            <label for="centerPicker">Add a center (up to 5)</label>
+            <select id="centerPicker"></select>
+          </div>
+          <ul id="pickedCenters" class="picked"></ul>
+          <p id="centersError" class="error" hidden></p>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="startDate">From</label>
+            <input type="date" id="startDate" />
+          </div>
+          <div class="field">
+            <label for="endDate">To</label>
+            <input type="date" id="endDate" />
+          </div>
+        </div>
+        <p id="datesError" class="error" hidden></p>
+
+        <div class="field">
+          <label for="currentAppt">Already booked? Only alert me before</label>
+          <input type="date" id="currentAppt" />
+          <p class="hint">Leave empty if you don't have an interview yet.</p>
+        </div>
+        <p id="currentApptError" class="error" hidden></p>
+
+        <div class="field">
+          <span class="label" id="daysLabel">Days</span>
+          <div id="weekdays" class="toggles" role="group" aria-labelledby="daysLabel"></div>
+        </div>
+
+        <div class="field">
+          <span class="label" id="timesLabel">Times</span>
+          <div id="dayparts" class="toggles" role="group" aria-labelledby="timesLabel"></div>
+        </div>
+        <p id="filtersError" class="error" hidden></p>
+
+        <div class="switches">
+          <label class="switch">
+            <input type="checkbox" id="sound" />
+            Play a sound with alerts
+          </label>
+          <label class="switch">
+            <input type="checkbox" id="pauseAfterAlert" />
+            Stop watching after the first alert
+          </label>
+        </div>
+      </fieldset>
+
+      <button type="submit" id="primaryButton" class="primary">Start watching</button>
+      <p class="hint centered">
+        Stay signed in at ttp.cbp.dhs.gov so you can book the moment an alert
+        arrives.
+      </p>
+    </form>
+
+    <footer>
+      <div id="bookedThanks" class="booked-thanks" hidden>
+        <p>Congratulations, and safe travels. If SoonerSlot helped, a short review helps other travelers find it.</p>
+        <a id="reviewLink" href="#" target="_blank" rel="noopener">Leave a review</a>
+      </div>
+      <button type="button" id="bookedButton" class="text-button">I booked my interview</button>
+      <p class="disclaimer">
+        Not affiliated with U.S. Customs and Border Protection or DHS. SoonerSlot
+        checks once a minute while Chrome is open, and your settings never
+        leave this browser.
+      </p>
+    </footer>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
