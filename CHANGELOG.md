@@ -4,7 +4,7 @@ All notable changes to SoonerSlot are documented here. The format follows [Keep 
 
 ## [1.0.0] – 2026-10-23
 
-First public release.
+First public release, available on the [Microsoft Edge Add-ons store](https://microsoftedge.microsoft.com/addons/detail/jjljahhpphkoeggpmihfokhcldhpblon).
 
 ### Added
 

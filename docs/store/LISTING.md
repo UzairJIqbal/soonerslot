@@ -98,6 +98,8 @@ Then tick all three certifications:
 
 # Microsoft Edge Add-ons
 
+**Live:** https://microsoftedge.microsoft.com/addons/detail/jjljahhpphkoeggpmihfokhcldhpblon (v1.0.0, approved 2026-10-24)
+
 Submitted through [Partner Center](https://partner.microsoft.com/dashboard/microsoftedge/overview). The same zip works unchanged. Most of the Chrome copy above carries over; the differences are below.
 
 ## Packages

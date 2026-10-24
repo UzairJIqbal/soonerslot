@@ -8,6 +8,7 @@
 
 Free, no account, and your settings never leave your browser.
 
+[![Get it for Microsoft Edge](https://img.shields.io/badge/Microsoft%20Edge-Get%20SoonerSlot-0078d7?style=flat-square&logo=microsoftedge&logoColor=white)](https://microsoftedge.microsoft.com/addons/detail/jjljahhpphkoeggpmihfokhcldhpblon)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-1f6f4a?style=flat-square)](https://developer.chrome.com/docs/extensions/develop/migrate/what-is-mv3)
 [![Chrome 116+](https://img.shields.io/badge/Chrome-116%2B-13283a?style=flat-square&logo=googlechrome&logoColor=white)](#install)
 [![CI](https://img.shields.io/github/actions/workflow/status/UzairJIqbal/soonerslot/ci.yml?branch=main&style=flat-square&label=checks)](https://github.com/UzairJIqbal/soonerslot/actions/workflows/ci.yml)
@@ -42,9 +43,13 @@ Trusted Traveler interviews are booked months out, but cancellations free up ear
 
 ## Install
 
-### From the Chrome Web Store
+### Microsoft Edge
 
-Coming soon.
+Install SoonerSlot from the [Microsoft Edge Add-ons store](https://microsoftedge.microsoft.com/addons/detail/jjljahhpphkoeggpmihfokhcldhpblon). Updates install automatically.
+
+### Google Chrome
+
+A Chrome Web Store listing is coming soon. Until then, install from source as described below.
 
 ### From source
 
